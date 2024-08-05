@@ -91,6 +91,7 @@ ol {
 
 .search-form__fieldset-title {
   font-weight: 400;
+  font-size: 18px;
   margin-bottom: 6px;
 }
 
@@ -228,10 +229,9 @@ input[type='checkbox']:checked + span {
   position: relative;
   height: 298px;
   overflow-y: scroll;
-}
-
-.content__list::-webkit-scrollbar {
-  width: 0px;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc;
 }
 
 .title {
@@ -247,9 +247,6 @@ input[type='checkbox']:checked + span {
   color: #545050;
 }
 
-.content__list-item {
-  margin: 2px;
-}
 .content__list-item:not(:last-child) {
   margin-bottom: 30px;
 }
@@ -258,7 +255,7 @@ input[type='checkbox']:checked + span {
   height: 0;
 }
 .content__card-link {
-  margin: 5px;
+  display: block;
   text-decoration: none;
   color: #fff;
 }
@@ -277,7 +274,8 @@ input[type='checkbox']:checked + span {
 }
 
 .content__card-link:focus-visible {
-  border: 1px solid #fff;
+  outline: 2px solid #fff;
+  outline-offset: -1px;
 }
 
 .content__video-card {
@@ -293,6 +291,7 @@ input[type='checkbox']:checked + span {
   font-size: 18px;
   line-height: 16.2px;
   word-wrap: break-word;
+  padding: 2px;
 }
 .content__video-card-title {
   font-family: 'Oswald', sans-serif;
@@ -300,7 +299,6 @@ input[type='checkbox']:checked + span {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
-  margin: 6px;
 }
 
 .content__video-card-description {

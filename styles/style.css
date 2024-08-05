@@ -71,11 +71,14 @@ ol {
 .result__video-container {
   position: relative;
   width: 711px;
+  height: 386px;
   margin-bottom: 16px;
 }
 
 .result__video {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .search-form {
   display: flex;
@@ -145,6 +148,7 @@ ol {
   display: flex;
   align-items: center;
   row-gap: 0.5px;
+  cursor: pointer;
 }
 
 .search-form__label:focus {
@@ -228,7 +232,7 @@ input[type='checkbox']:checked + span {
 .content__list {
   position: relative;
   height: 298px;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: #ccc;
@@ -248,7 +252,7 @@ input[type='checkbox']:checked + span {
 }
 
 .content__list-item:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .cards-list-item-template::-webkit-scrollbar {
@@ -278,6 +282,9 @@ input[type='checkbox']:checked + span {
   outline-offset: -1px;
 }
 
+.content__card-link_current {
+  background-color: #545050;
+}
 .content__video-card {
   display: grid;
   grid-template-columns: 200px 193px;
@@ -307,6 +314,8 @@ input[type='checkbox']:checked + span {
 
 .content__video-card-thumbnail {
   width: 194px;
+  height: 103px;
+  object-fit: cover;
 }
 
 .more-button {
